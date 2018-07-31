@@ -9,7 +9,7 @@ usage: ./dimen_gen.sh values-sw{base}dp/dimens.xml
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Gardle Usage:
-add to app/build.gradle
+add below to app/build.gradle
 
 task dimensionPrebuildTask(type: Exec) {
 
@@ -20,5 +20,6 @@ task dimensionPrebuildTask(type: Exec) {
 }
 
 build.dependsOn preBuild
+
 preBuild.dependsOn dimensionPrebuildTask
 
