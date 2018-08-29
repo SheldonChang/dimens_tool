@@ -19,7 +19,13 @@ task dimensionPrebuildTask(type: Exec) {
     ignoreExitValue true
 }
 
-build.dependsOn preBuild
-
 preBuild.dependsOn dimensionPrebuildTask
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+How to know smallest width (sw) of an android device?
+
+Configuration config = getResources().getConfiguration();  
+config.smallestScreenWidthDp
+
+https://android-developers.googleblog.com/2011/07/new-tools-for-managing-screen-sizes.html
